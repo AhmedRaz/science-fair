@@ -7,6 +7,7 @@ class App extends Component {
     fairPics: null
   }
 
+//fetches image data from job site manager back end
   getFairPics = () => {
     const baseUrl = `http://localhost:3000/api/v1`;
     return fetch(`${baseUrl}/images`, {
@@ -38,9 +39,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        
         { this.state.fairPics && this.renderFairImages() }
       </div>
     );
