@@ -28,7 +28,7 @@ class App extends Component {
     this.getFairPics()
   }
 
-  //refactor this to use a component 
+  //refactor this to use a component
   renderFairImages = () => {
     return this.state.fairPics.map(image => {
       return <img className="image-tag" src={image.image_data} alt={`${image.image_name}`} key={`image-${image.id}`}  />
@@ -38,8 +38,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         { this.state.fairPics && this.renderFairImages() }
+        //testing ShowImage component
+        <ShowImage image={this.state.fairPics[0]} />
       </div>
     );
   }
