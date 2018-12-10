@@ -24,9 +24,11 @@ class App extends Component {
   }
 
   componentDidMount() {
+    //on mount run getFairPics method
     this.getFairPics()
   }
 
+  //refactor this to use a component 
   renderFairImages = () => {
     return this.state.fairPics.map(image => {
       return <img className="image-tag" src={image.image_data} alt={`${image.image_name}`} key={`image-${image.id}`}  />
