@@ -39,8 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         { this.state.fairPics && this.renderFairImages() }
-        //testing ShowImage component
-        <ShowImage image={this.state.fairPics[0]} />
+        { this.state.fairPics? <ShowImage image={this.state.fairPics[0]} /> : <div>"No Image Found"</div>}
       </div>
     );
   }
